@@ -1,0 +1,46 @@
+[project]
+name = "oc_declare_plug"
+version = "0.1.0"
+description = "Object-Centric Declare"
+readme = "README.md"
+authors = [
+    { name = "Görkem-Emre Öztürk", email = "goerkem.oeztuerk@rwth-aachen.de" },
+]
+maintainers = [
+    { name = "Görkem-Emre Öztürk", email = "goerkem.oeztuerk@rwth-aachen.de" },
+]
+license = { text = "MIT" }
+dependencies = [
+    "oc-declare>=0.1.0",
+    "ocelescope~=0.1.3",
+]
+requires-python = ">=3.13"
+
+[dependency-groups]
+dev = ["black>=25.1.0", "pre-commit>=4.2.0", "ruff>=0.12.7"]
+
+
+[tool.ty]
+# All rules are enabled as "error" by default; no need to specify unless overriding.
+# Example override: relax a rule for the entire project (uncomment if needed).
+# rules.TY015 = "warn"  # For invalid-argument-type, warn instead of error.
+
+[tool.ruff]
+line-length = 120
+
+[tool.ruff.lint]
+select = [
+    "E",  # pycodestyle errors
+    "W",  # pycodestyle warnings
+    "F",  # Pyflakes
+    "I",  # isort
+    "B",  # flake8-bugbear
+    "UP", # pyupgrade
+]
+
+[tool.uv]
+package = true
+
+[build-system]
+requires = ["uv_build>=0.8.4,<0.9.0"]
+build-backend = "uv_build"
