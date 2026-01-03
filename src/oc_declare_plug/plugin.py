@@ -163,8 +163,8 @@ def check_conformance_for_constraints(processed, constraints_resource: Constrain
 
 
 class OcDeclare(Plugin):
-    label = "OC Declare"
-    description = "Object-Centric Declare"
+    label = "OC-DECLARE"
+    description = "Object-Centric DECLARE"
     version = "0.1.1"
 
     @plugin_method(label="Discover Constraints", description="Discover Constraints")
